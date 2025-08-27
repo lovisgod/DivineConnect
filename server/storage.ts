@@ -187,7 +187,14 @@ export class MemStorage implements IStorage {
 
   async createSermon(insertSermon: InsertSermon): Promise<Sermon> {
     const id = randomUUID();
-    const sermon: Sermon = { ...insertSermon, id, createdAt: new Date() };
+    const sermon: Sermon = { 
+      ...insertSermon, 
+      id, 
+      createdAt: new Date(),
+      duration: insertSermon.duration ?? null,
+      description: insertSermon.description ?? null,
+      imageUrl: insertSermon.imageUrl ?? null
+    };
     this.sermons.set(id, sermon);
     return sermon;
   }
@@ -223,7 +230,12 @@ export class MemStorage implements IStorage {
 
   async createDevotion(insertDevotion: InsertDevotion): Promise<Devotion> {
     const id = randomUUID();
-    const devotion: Devotion = { ...insertDevotion, id, createdAt: new Date() };
+    const devotion: Devotion = { 
+      ...insertDevotion, 
+      id, 
+      createdAt: new Date(),
+      imageUrl: insertDevotion.imageUrl ?? null
+    };
     this.devotions.set(id, devotion);
     return devotion;
   }
@@ -251,7 +263,13 @@ export class MemStorage implements IStorage {
 
   async createLeader(insertLeader: InsertLeader): Promise<Leader> {
     const id = randomUUID();
-    const leader: Leader = { ...insertLeader, id };
+    const leader: Leader = { 
+      ...insertLeader, 
+      id,
+      order: insertLeader.order ?? null,
+      description: insertLeader.description ?? null,
+      imageUrl: insertLeader.imageUrl ?? null
+    };
     this.leaders.set(id, leader);
     return leader;
   }

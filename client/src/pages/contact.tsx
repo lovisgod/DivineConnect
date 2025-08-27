@@ -88,7 +88,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-medium text-foreground mb-1">Address</h3>
                       <p className="text-muted-foreground" data-testid="text-church-address">
-                        123 Grace Street<br>
+                        123 Grace Street<br />
                         Community City, CC 12345
                       </p>
                     </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-medium text-foreground mb-1">Office Hours</h3>
                       <p className="text-muted-foreground" data-testid="text-office-hours">
-                        Monday - Friday: 9:00 AM - 5:00 PM<br>
+                        Monday - Friday: 9:00 AM - 5:00 PM<br />
                         Saturday: 9:00 AM - 1:00 PM
                       </p>
                     </div>
