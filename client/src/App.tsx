@@ -10,7 +10,6 @@ import Devotions from "./pages/devotions";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
 
 function Router() {
   return (
@@ -34,7 +33,6 @@ function App() {
           <main>
             <Router />
           </main>
-          <Footer />
         </div>
         <Toaster />
       </TooltipProvider>
