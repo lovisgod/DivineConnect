@@ -1,15 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import AudioPlayer from "@/components/audio/audio-player";
 import SermonCard from "@/components/sermons/sermon-card";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { useAudio } from "@/contexts/audio-context";
 import type { Sermon } from "@shared/schema";
 
 export default function Messages() {
-  const [currentSermon, setCurrentSermon] = useState<Sermon | null>(null);
+  const { playSermon } = useAudio();
   const [searchQuery, setSearchQuery] = useState("");
 
   const { data: sermons, isLoading } = useQuery<Sermon[]>({
@@ -23,21 +23,11 @@ export default function Messages() {
   ) || [];
 
   const handlePlaySermon = (sermon: Sermon) => {
-    setCurrentSermon(sermon);
-    // Scroll to audio player
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    playSermon(sermon);
   };
 
   return (
     <div className="py-8">
-      {/* Current Audio Player */}
-      {currentSermon && (
-        <section className="mb-8 bg-muted py-8" data-testid="section-current-player">
-          <div className="container mx-auto px-4">
-            <AudioPlayer sermon={currentSermon} />
-          </div>
-        </section>
-      )}
 
       <div className="container mx-auto px-4">
         {/* Header */}

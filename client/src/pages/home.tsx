@@ -1,17 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import AudioPlayer from "@/components/audio/audio-player";
 import SermonCard from "@/components/sermons/sermon-card";
-import DevotionCard from "@/components/devotions/devotion-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Mic } from "lucide-react";
+import { useAudio } from "@/contexts/audio-context";
 import type { Sermon } from "@shared/schema";
 
 export default function Home() {
-  const [currentSermon, setCurrentSermon] = useState<Sermon | null>(null);
+  const { playSermon } = useAudio();
 
   const { data: recentSermons, isLoading: sermonsLoading } = useQuery<Sermon[]>({
     queryKey: ['/api/sermons/recent'],
@@ -20,7 +18,7 @@ export default function Home() {
 
 
   const handlePlaySermon = (sermon: Sermon) => {
-    setCurrentSermon(sermon);
+    playSermon(sermon);
   };
 
 
@@ -71,14 +69,6 @@ export default function Home() {
       </section>
 
 
-      {/* Current Audio Player */}
-      {currentSermon && (
-        <section className="py-8 bg-background" data-testid="section-current-player">
-          <div className="container mx-auto px-4">
-            <AudioPlayer sermon={currentSermon} />
-          </div>
-        </section>
-      )}
 
       {/* Recent Messages */}
       <section className="py-16" data-testid="section-recent-messages">
