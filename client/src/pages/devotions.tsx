@@ -13,7 +13,7 @@ const categories = [
   { name: "Morning", value: "morning", icon: Sun, color: "bg-accent/20 text-accent" },
   { name: "Evening", value: "evening", icon: Moon, color: "bg-primary/20 text-primary" },
   { name: "Bible Study", value: "bible-study", icon: Book, color: "bg-secondary/20 text-secondary" },
-  { name: "Youth", value: "youth", icon: Heart, color: "bg-accent/20 text-accent" },
+  // { name: "Youth", value: "youth", icon: Heart, color: "bg-accent/20 text-accent" },
 ];
 
 export default function Devotions() {

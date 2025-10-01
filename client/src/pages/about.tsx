@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Sun, Users, Heart } from "lucide-react";
+import { Sun, Users, Heart, Flame } from "lucide-react";
 import type { Leader } from "@shared/schema";
 
 export default function About() {
@@ -17,7 +17,7 @@ export default function About() {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-3xl lg:text-4xl font-bold text-primary mb-4" data-testid="text-about-title">
-              About Grace Community
+              About Adorned Church
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto" data-testid="text-about-subtitle">
               Learn more about our church family, our mission, and what we believe
@@ -29,7 +29,7 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6" data-testid="text-mission-title">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed mb-6" data-testid="text-mission-content-1">
-                At Grace Community Church, our mission is to love God, love people, and make disciples. 
+                At Adorned Church, our mission is to love God, love people, and make disciples. 
                 We believe in creating a welcoming environment where everyone can grow in their relationship 
                 with Jesus Christ and discover their purpose in God's kingdom.
               </p>
@@ -189,14 +189,14 @@ export default function About() {
 
               <div className="text-center">
                 <div className="bg-secondary/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-2xl text-secondary" />
+                  <Flame className="text-2xl text-secondary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2" data-testid="text-youth-ministry">
-                  Youth Ministry
+                  Transfiguration (PITHG)
                 </h3>
-                <p className="text-muted-foreground mb-2">Friday 6:00 PM</p>
+                <p className="text-muted-foreground mb-2">Last Friday of the Month  7:00 PM</p>
                 <p className="text-sm text-muted-foreground">
-                  Fun activities and discipleship for ages 12-18
+                  A 12 Hours prayer program designed to help you connect with God on a deeper level.
                 </p>
               </div>
             </div>

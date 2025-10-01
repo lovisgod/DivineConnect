@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <Church className="text-2xl text-accent" />
               <div>
-                <h3 className="text-lg font-bold">Grace Community</h3>
+                <h3 className="text-lg font-bold">Adorned Community</h3>
                 <p className="text-sm text-primary-foreground/80">Church</p>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/80 text-sm">
-            &copy; 2023 Grace Community Church. All rights reserved.
+            &copy; 2023 Adorned Church. All rights reserved.
           </p>
         </div>
       </div>

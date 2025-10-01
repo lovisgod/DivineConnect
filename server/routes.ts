@@ -1,5 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import { dbStorage } from "./dbStorage";
 import { storage } from "./storage";
 import { insertContactMessageSchema } from "@shared/schema";
 import { z } from "zod";
@@ -8,7 +9,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Sermons routes
   app.get("/api/sermons", async (req, res) => {
     try {
-      const sermons = await storage.getAllSermons();
+      const sermons = await dbStorage.getSermons();
+      console.log(sermons); 
       res.json(sermons);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch sermons" });
@@ -18,7 +20,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/sermons/recent", async (req, res) => {
     try {
       const limit = parseInt(req.query.limit as string) || 3;
-      const sermons = await storage.getRecentSermons(limit);
+      const sermons = await dbStorage.getRecentSermons(limit);
+      console.log(sermons); 
       res.json(sermons);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch recent sermons" });

@@ -38,7 +38,7 @@ export default function Home() {
         
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6" data-testid="text-hero-title">
-            Welcome to Grace Community
+            Welcome to Adorned Community
           </h1>
           <p className="text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto" data-testid="text-hero-subtitle">
             A place where faith grows, community thrives, and hope is found. Join us as we worship together and grow in God's love.

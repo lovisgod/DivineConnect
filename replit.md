@@ -1,8 +1,8 @@
-# Grace Community Church Website
+# Adorned Community Church Website
 
 ## Overview
 
-This is a full-stack church website application built with React, Express, and Drizzle ORM. The application serves as a digital platform for Grace Community Church, providing features for sharing sermons, devotions, church information, and contact functionality. The website includes audio playback for sermons, categorized devotional content, church leadership information, and a contact form for community engagement.
+This is a full-stack church website application built with React, Express, and Drizzle ORM. The application serves as a digital platform for Adorned Church providing features for sharing sermons, devotions, church information, and contact functionality. The website includes audio playback for sermons, categorized devotional content, church leadership information, and a contact form for community engagement.
 
 ## User Preferences
 

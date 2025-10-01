@@ -23,7 +23,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-3" data-testid="link-home-logo">
             <Church className="text-2xl text-primary" />
             <div>
-              <h1 className="text-xl font-bold text-primary">Grace Community</h1>
+              <h1 className="text-xl font-bold text-primary">Adorned Community</h1>
               <p className="text-sm text-muted-foreground">Church</p>
             </div>
           </Link>
@@ -62,8 +62,8 @@ export default function Header() {
               <div className="flex items-center space-x-3 mb-8">
                 <Church className="text-xl text-primary" />
                 <div>
-                  <h2 className="font-semibold text-primary">Grace Community</h2>
-                  <p className="text-sm text-muted-foreground">Church</p>
+                  <h2 className="font-semibold text-primary">Adorned Church</h2>
+                  <p className="text-sm text-muted-foreground">Community</p>
                 </div>
               </div>
               <nav className="space-y-4" data-testid="nav-mobile">
