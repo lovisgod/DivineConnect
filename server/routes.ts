@@ -45,10 +45,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { category } = req.query;
       if (category && typeof category === "string") {
-        const devotions = await storage.getDevotionsByCategory(category);
+        const devotions = await dbStorage.getDevotionsByCategory(category);
         res.json(devotions);
       } else {
-        const devotions = await storage.getAllDevotions();
+        const devotions = await dbStorage.getAllDevotions();
         res.json(devotions);
       }
     } catch (error) {

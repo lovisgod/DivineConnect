@@ -23,8 +23,8 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-3" data-testid="link-home-logo">
             <Church className="text-2xl text-primary" />
             <div>
-              <h1 className="text-xl font-bold text-primary">Adorned Community</h1>
-              <p className="text-sm text-muted-foreground">Church</p>
+              <h1 className="text-xl font-bold text-primary">Adorned Church</h1>
+              <p className="text-sm text-muted-foreground">Community</p>
             </div>
           </Link>
 
