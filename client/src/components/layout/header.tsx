@@ -9,6 +9,7 @@ const navigation = [
   { name: "Messages", href: "/messages", icon: Mic },
   { name: "Devotions", href: "/devotions", icon: BookOpen },
   { name: "About", href: "/about", icon: Info },
+  { name: "Bible", href: "/bible", icon: BookOpen },
   { name: "Contact", href: "/contact", icon: Mail },
 ];
 

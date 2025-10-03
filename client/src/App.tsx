@@ -10,6 +10,7 @@ import Home from "./pages/home";
 import Messages from "./pages/messages";
 import Devotions from "./pages/devotions";
 import About from "./pages/about";
+import BibleReader from "./pages/bible";
 import Contact from "./pages/contact";
 import Header from "@/components/layout/header";
 
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/messages" component={Messages} />
       <Route path="/devotions" component={Devotions} />
       <Route path="/about" component={About} />
+      <Route path="/bible" component={BibleReader} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
